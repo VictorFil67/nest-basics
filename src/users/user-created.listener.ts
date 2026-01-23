@@ -5,6 +5,6 @@ import { OnEvent } from '@nestjs/event-emitter';
 export class UserCreatedListener {
   @OnEvent('user.created')
   handleUserCreated(payload: { userId: number }) {
-    console.log('User created: ', payload.userId);
+    console.log('New User created: ', payload.userId);
   }
 }

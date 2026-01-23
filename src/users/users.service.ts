@@ -22,6 +22,7 @@ export class UsersService {
   create(name: string) {
     const user = { id: this.users.length + 1, name };
     this.users.push(user);
+    console.log('LOCAL EMIT:', user.id);
     this.eventEmitter.emit('user.created', { userId: user.id });
     return user;
   }
